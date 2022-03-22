@@ -79,7 +79,7 @@ steps:
     workingDirectory: $(ml-path)
     scriptLocation: inlineScript
     scriptType: 'bash'
-    inlineScript: 'az ml computetarget create aks --name $(ml-aks-name) --resource-group $(ml-rg) --location eastus2 --vm-size Standard_DS4_v2 --cluster-purpose DevTest'
+    inlineScript: 'az ml computetarget create aks --name $(ml-aks-name) --resource-group $(ml-rg) --location eastus2 --vm-size standard_dc16ds_v3 --cluster-purpose DevTest'
 
 - task: AzureCLI@2
   displayName: 'Deploy model to AKS for Production'
